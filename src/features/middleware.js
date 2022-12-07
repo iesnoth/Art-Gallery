@@ -1,4 +1,8 @@
+
+//displays state value before and after dispatch
 export const logger = store => next => action => {
+    //treat it just the way Redux would call our Thunk:
+    //by passing it the store dispatch and getState methods.
     if (typeof action === 'function') {
         action(store.dispatch, store.getState)
     } else { 

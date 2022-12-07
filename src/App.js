@@ -18,6 +18,7 @@ function App(props) {
   }
 
   useEffect(() => {
+    //in order to trigger API call and dispatch fetchData thunk on rerender
     dispatch(fetchData())
   }, [props.objectId, dispatch])
 
